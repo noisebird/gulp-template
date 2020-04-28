@@ -48,14 +48,14 @@
     "stylelint-order": "4.0.0"
   },
   "dependencies": {
-    "art-template": "^4.13.2",
-    "backbone": "^1.4.0",
-    "jquery": "^1.12.4",
+    "art-template": "4.13.2",
+    "backbone": "1.4.0",
+    "jquery": "3.4.1",
     "moment": "2.24.0",
-    "require-css": "^0.1.10",
-    "requirejs": "^2.3.6",
+    "require-css": "0.1.10",
+    "requirejs": "2.3.6",
     "text": "github:requirejs/text",
-    "underscore": "^1.10.2"
+    "underscore": "1.10.2"
   },
   "browserslist": {
     "browsers": [
