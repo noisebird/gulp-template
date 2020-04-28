@@ -1,0 +1,120 @@
+{
+  "root": true,
+  // parser指定解析器，默认的为espree。babel-eslint是一个Babel parser的包装器，这个包装器使得 Babel parser 可以和 ESLint 协调工作
+  "extends": ["eslint:recommended"],
+  "plugins": ["eslint-plugin-html"],
+  "settings": {
+    "html/html-extensions": [".html", ".tpl"]
+  },
+  "parserOptions": {
+    "parser": "babel-eslint",
+    // 这是个对象，表示你想使用的额外的语言特性:  jsx: true // 启用 JSX
+    "ecmaVersion": 8,
+    "ecmaFeatures": {
+      "generators": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jquery": true
+  },
+  // rule配置规则 "规则名": [规则值, 规则配置]  "off"或者0 | 关闭规则关闭 "warn"或者1 在打开的规则作为警告（不影响退出代码）| "error"或者2 把规则作为一个错误（退出代码触发时为1）
+  "rules": {
+    "indent": ["error", 4],
+    "import/no-amd": 0,
+    "import/no-dynamic-require": 0,
+    "global-require": 0,
+    // 禁止使用console语法
+    "no-console": "error",
+    //禁止使用alert confirm prompt
+    "no-alert": 2,
+    //禁止使用eval
+    "no-eval": 2,
+    //禁止非必要的括号
+    "no-extra-parens": 2,
+    //禁止使用var,
+    "no-var": 2,
+    //强制驼峰法命名
+    "camelcase": 2,
+    //字面量对象 最后一条数据不能有逗号,
+    "comma-dangle": [2, "never"],
+    //是否允许非空数组里面有多余的空格
+    "array-bracket-spacing": [2, "never"],
+    //一行结束后面不要有空格
+    "no-trailing-spaces": 2,
+    //必须使用 if(){} 中的{}
+    "curly": [2, "all"],
+    //switch语句最后必须有default
+    "default-case": 2,
+    //对象.属性在换行时.的位置必须在下一行
+    "dot-location": [2, "property"],
+    "no-unused-vars": [2, {"vars": "all", "args": "after-used"}],
+    //语句强制分号结尾,
+    "semi": [1, "always"],
+    //首选const
+    "prefer-const": 2,
+    // 对import的变量进行排序，没有、* {多个}、单个
+    "sort-imports": [2, {
+      "ignoreCase": false,
+      "ignoreDeclarationSort": false,
+      "ignoreMemberSort": false,
+      "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+    }],
+    // 函数的最大行数
+    "max-statements": [2, 20],
+    // 文件最多有多少行
+    "max-lines": [2, {"max": 500, "skipBlankLines": true}],
+    //优先使用模板字符串拼接 ``
+    "prefer-template": 2,
+    //不要使用arguments，使用rest参数 （...rest)
+    "prefer-rest-params": 2,
+    //去掉无用的构造函数
+    "no-useless-constructor": 2,
+    //禁止重复导入 import { merge } from 'module'; import something from 'another-module';import { find } from 'module';
+    "no-duplicate-imports": 2,
+    //函数最多4个参数,
+    "max-params": [0, 4],
+    //嵌套块深度3层
+    "max-depth": [0, 3],
+    //对象字面量中冒号的前后空格,
+    "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
+    //逗号前后的空格
+    "comma-spacing": [2, {"before": false, "after": true}],
+    // => 前后空格
+    "arrow-spacing": [2, {"before": true, "after": true}],
+    // 代码块前后的空格
+    "block-spacing": [2, "always"],
+    // 多个空格
+    "no-multi-spaces": 2,
+    // operator 前后的空格
+    "space-infix-ops": 2,
+    //大括号内是否允许不必要的空格{ a: 2 }
+    "object-curly-spacing": [2, "always"],
+    "keyword-spacing": 2,
+    //分号前后空格
+    "semi-spacing": [2, {"before": false, "after": true}],
+    //是否允许非空数组里面有多余的空格
+    "array-bracket-spacing": [2, "never"],
+    // 要求箭头函数的参数使用圆括号。箭头函数体只有一个参数时，可以省略圆括号。always--要求在所有情况下使用圆括号将参数括起来。
+    "arrow-parens": [2, "as-needed"],
+    // 要求箭头函数体使用大括号。为了规避箭头函数语法可能带来的错误，当函数体只有一行的时候，若不加大括号，会默认把这行代码的返回结果给隐式 return。当函数体有多行的时候，必须使用大括号，并且需要自己写 return 语句。
+    //always--强制始终用大括号 | as-needed--当大括号是可以省略的，强制不使用它们 | never--禁止在函数体周围出现大括号
+    "arrow-body-style": [2, "as-needed"],
+    // 强制使用shorthand
+    "object-shorthand": 2,
+    // 禁止对函数参数二次赋值
+    "no-param-reassign": 2,
+    // 禁止常量表达式语法 例如 3>4
+    "no-constant-condition": 1
+  },
+  // 允许在代码中使用全局变量
+  "globals": {
+    "Backbone": true,
+    "define": true,
+    "$": true,
+    "_": true,
+    "moment": true,
+    "template": true
+  }
+}

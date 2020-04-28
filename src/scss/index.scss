@@ -1,0 +1,18 @@
+.container {
+  .inner {
+    background: red;
+  }
+}
+
+.content {
+  .inner {
+    position: absolute;
+    width: 100px;
+    color: black;
+    opacity: 1;
+  }
+}
+
+::placeholder {
+  color: gray;
+}
