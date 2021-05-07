@@ -55,7 +55,7 @@
     "require-css": "0.1.10",
     "requirejs": "2.3.6",
     "text": "github:requirejs/text",
-    "underscore": "1.10.2"
+    "underscore": "1.12.1"
   },
   "browserslist": {
     "browsers": [
