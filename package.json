@@ -51,7 +51,7 @@
     "art-template": "4.13.2",
     "backbone": "1.4.0",
     "jquery": "3.4.1",
-    "moment": "2.24.0",
+    "moment": "2.29.2",
     "require-css": "0.1.10",
     "requirejs": "2.3.6",
     "text": "github:requirejs/text",
